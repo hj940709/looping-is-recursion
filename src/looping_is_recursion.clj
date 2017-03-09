@@ -42,11 +42,6 @@
       (< i (count a-seq)) (recur (inc i) (/ (+ (* a i) (get a-seq i)) (inc i)))
       (>= i (count a-seq)) a)))
 
-(defn toggle [a-set elem]
-  (if(contains? a-set elem)
-    (disj a-set elem)
-    (conj a-set elem)))   
-
 (defn parity [a-seq]
   (loop [seq a-seq
         set #{}]
